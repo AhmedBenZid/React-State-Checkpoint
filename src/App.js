@@ -6,7 +6,7 @@ class App extends Component {
     Person: {
       fullName: "Ahmed Ben Zid",
       bio: "A Full-Stack JS student",
-      imgSrc: "",
+      imgSrc: "./ahmedbz.jpg",
       profession: "Student"
     },
     show: false,
@@ -35,13 +35,14 @@ class App extends Component {
               Hide Profile
   </Button>
             <Card style={{ margin: 20 }}>
+              <Card.Img variant="top" src={this.state.Person.imgSrc} style={{ height: 300, width: 300 }} />
               <ListGroup variant="flush">
                 <ListGroup.Item>{this.state.Person.fullName}</ListGroup.Item>
                 <ListGroup.Item>{this.state.Person.profession}</ListGroup.Item>
                 <ListGroup.Item>{this.state.Person.bio}</ListGroup.Item>
               </ListGroup>
               <Spinner animation="grow" />
-              <h4 >{this.state.time}</h4>
+              <h4 >{this.state.time} Seconds</h4>
             </Card>
 
           </div>}
